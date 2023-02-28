@@ -1,8 +1,6 @@
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 public class Cone {
-    static Scanner console;
 
     private double r;
     private double h;
@@ -27,9 +25,14 @@ public class Cone {
     public double getVolume() {
         return (1.0 / 3.0) * Math.PI * (r * r) * h;
     }
+    
+    // override
+    public String toString() {
+        return "(h: " + h + ", r: " + r + ")";
+    }
 
-    public void Print () {
-        System.out.println("(h: " + h + ", r: " + r + ")");
+    public void print() {
+        System.out.println(toString());
     }
 
     public static void main(String[] args) {
@@ -37,7 +40,7 @@ public class Cone {
         Cone newCone = new Cone(15, 7.5);
         System.out.println("Task 2 Cone\n");
         System.out.print("Cone A ");
-        newCone.Print();
+        newCone.print();
 
         double sideBA = newCone.getSideBaseArea();
         double volume = newCone.getVolume();
