@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.io.IOException;
 import java.text.DecimalFormat;
 
 public class Vector3D {
